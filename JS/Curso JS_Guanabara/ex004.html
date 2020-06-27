@@ -7,16 +7,24 @@
     <style>
         body {
             font: normal 20 pt Arial;
+            background-color: black;
+        }
+        .teste01 {
+            color: black;
+            background-color:yellow;
+            width: 300px;
         }
     </style>
 </head>
 <body>
-
+    <div class="teste01">
     <script>
-        var nome = window.prompt('Qual é seu nome ?')
-        document.writeln(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)
+        // as tag "<strong></strong> deixa o texto em negrito"
+        var nome = window.prompt('Qual é seu nome ?') // a variável 'nome' irá receber um texto digitado pelo usuário
+        document.writeln(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`) //
         document.writeln(`Seu nome em maiúsculas é: ${nome.toUpperCase()}<br>`)
         document.writeln(`Seu nome em minúscula é: ${nome.toLowerCase()}`)
     </script>
+    </div>
 </body>
 </html>
