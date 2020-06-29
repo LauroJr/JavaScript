@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(102, 212, 207);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // window.document.getElementsByTagName(): "Selecionando por Marca"
+        // window.document.getElementById(): "Selecionando por ID"
+        // window.document.getElementsByName(): "Selecionando por Nome"
+        // window.document.getElementsByClassName(): "Selecionando por Classe"
+        // window.document.querySelector() e querySelectorAll(): "Selecionando por Seletor"
+        var corpo = window.document.body // Estanciando um obejto da classe window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] // O zero dentro dos colchetes indica que está sendo pego o primeiro parágrafo. Posso pegar qualquer tag usando os métodos da classe acima.
+        window.document.write('Está escrito assim: ' + p1.innerText) // Use .write para mostrar na tela o que deseja. Se usar o innerText, viria com toda a formatação do html. (negrito, fonte, etc)
+        p1.style.color = 'blue'
+        corpo.style.background = 'black' // utilizando o método background
+        /*
+        SELECIONANDO POR ID
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        -----------------------------------------------------
+        SELECIONANDO POR NAME OU CLASS
+        <div name="msg">Clique em mim</div>
+        <div class="msg">Clique em mim</div>
+        */
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'black'
+        d.style.background = 'blue'
+
+    </script>
+</body>
+</html>
